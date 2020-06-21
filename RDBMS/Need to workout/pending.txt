@@ -1,7 +1,0 @@
-18Mx24 – Problem Sheet – 3 [25th March 2020]
-	g. Write check conditions   to ensure that:
-i)  Every employee works for a company located in the same city as the city in
-     which the employee lives.
-ii)  No employee earns a salary higher than that of his manager
-
-
