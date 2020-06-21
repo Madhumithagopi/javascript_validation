@@ -1,0 +1,58 @@
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>javascript_validation</title>
+          <link rel="stylesheet" href="style_login.css">
+    </head>
+<body>
+    <div class="login-wrap">
+      <div class="login-html" style="background-image: url('space.jpg');">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <div class="login-form" >
+            <div class="group">
+			<br><br>
+			</div>
+            <div class="group">
+              <label for="name" class="label">Name</label>
+              <input type="text" class="input" required id="user">
+            </div>
+            <div class="group">
+              <label for="email" class="label">Email</label>
+              <input type="text" class="input" required id="mail">
+            </div>
+            <div class="group">
+			<button onclick="validate()" class="button">Sign Up Now!</button> 
+            </div>
+        </div>
+      </div>
+     </div>
+	 <script>
+        function validate()
+        {    
+            var re = /^[A-Za-z]+$/;
+            var username = document.getElementById("user");
+            var mail = document.getElementById("mail");
+            if(re.test(username.value))
+            {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value))
+                {
+                    alert('Login Processing...');
+                    redirect(username,mail);
+                }
+                else
+                {
+                    alert("Invalid email address!")                    
+                }               
+            }                
+            else
+            {
+                alert('Invalid Name.'); 
+            }                     
+        }
+        function redirect() 
+        {
+            location.replace('https://vickypotter.github.io/solar_system/');
+        }
+    </script>
+	 </body>
+	   </html>
